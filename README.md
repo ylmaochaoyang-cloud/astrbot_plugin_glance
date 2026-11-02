@@ -1,6 +1,6 @@
 # 余光 · astrbot_plugin_glance
 
-![余光](assets/cover.png)
+<p align="center"><img src="assets/cover.png" width="720" alt="余光"></p>
 
 偶尔看一眼屏幕，有变化才说话。
 
