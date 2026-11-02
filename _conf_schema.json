@@ -1,0 +1,55 @@
+{
+  "enable": {
+    "type": "bool",
+    "description": "启用眼睛",
+    "hint": "默认关闭。开启后才会定时截屏并调用本地视觉模型；关闭时只保留 /eye 状态查看。",
+    "default": false
+  },
+  "target_umo": {
+    "type": "string",
+    "description": "推送到哪个会话",
+    "hint": "AstrBot 的 unified_msg_origin，例如 webchat:FriendMessage:webchat!<用户名>!<会话id>。留空则不启动。",
+    "default": ""
+  },
+  "sample_seconds": {
+    "type": "float",
+    "description": "采样间隔（秒）",
+    "hint": "每隔这么久掷一次骰子，命中才真的截屏。调小会明显增加开销。",
+    "default": 300
+  },
+  "prob_percent": {
+    "type": "int",
+    "description": "命中概率（0-100）",
+    "hint": "与采样间隔相乘就是实际看图频率。默认 20，即平均每五轮看一眼。",
+    "default": 20
+  },
+  "model": {
+    "type": "string",
+    "description": "视觉模型名",
+    "hint": "Ollama 里已有的多模态模型，例如 qwen3-vl:4b。",
+    "default": "qwen3-vl:4b"
+  },
+  "ollama_url": {
+    "type": "string",
+    "description": "Ollama 地址",
+    "default": "http://127.0.0.1:11434"
+  },
+  "shot_dir": {
+    "type": "string",
+    "description": "截图目录",
+    "hint": "留空则放在插件数据目录下的 shots。",
+    "default": ""
+  },
+  "log_path": {
+    "type": "string",
+    "description": "观察日志路径",
+    "hint": "留空放在插件数据目录。",
+    "default": ""
+  },
+  "status_path": {
+    "type": "string",
+    "description": "状态文件路径",
+    "hint": "供 /eye 读取，留空放在插件数据目录。",
+    "default": ""
+  }
+}
