@@ -1,6 +1,6 @@
 # 余光 · astrbot_plugin_glance
 
-<p align="center"><img src="assets/cover.png" width="720" alt="余光"></p>
+<p align="center"><img src="assets/icon.png" width="160" alt="余光"></p>
 
 偶尔看一眼屏幕，有变化才说话。
 
