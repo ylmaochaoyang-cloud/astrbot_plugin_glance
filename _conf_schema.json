@@ -1,14 +1,20 @@
 {
-  "enable": {
-    "type": "bool",
-    "description": "启用眼睛",
-    "hint": "默认关闭。开启后才会定时截屏并调用本地视觉模型；关闭时只保留 /eye 状态查看。",
-    "default": false
+  "mode": {
+    "type": "string",
+    "description": "工作模式",
+    "hint": "silent 只记账；push 变化时推一句；look 只给模型工具、按需看；both 两者都开。默认 silent。",
+    "options": [
+      "silent",
+      "push",
+      "look",
+      "both"
+    ],
+    "default": "silent"
   },
   "target_umo": {
     "type": "string",
     "description": "推送到哪个会话",
-    "hint": "AstrBot 的 unified_msg_origin，例如 webchat:FriendMessage:webchat!<用户名>!<会话id>。留空则不启动。",
+    "hint": "只在 silent/push/both 下用于推送；look 模式不需要。留空则不采样。",
     "default": ""
   },
   "sample_seconds": {
@@ -43,13 +49,24 @@
   "log_path": {
     "type": "string",
     "description": "观察日志路径",
-    "hint": "留空放在插件数据目录。",
     "default": ""
   },
   "status_path": {
     "type": "string",
     "description": "状态文件路径",
-    "hint": "供 /eye 读取，留空放在插件数据目录。",
     "default": ""
+  },
+  "state_path": {
+    "type": "string",
+    "description": "最近一次看见的状态文件",
+    "hint": "eye_state.json，供外部读取；留空放在插件数据目录。",
+    "default": ""
+  },
+  "enable": {
+    "type": "bool",
+    "description": "旧开关（仅兼容）",
+    "hint": "新配置请用 mode。只有 mode 缺省时才参考它：true 视为 push。",
+    "invisible": true,
+    "default": false
   }
 }
