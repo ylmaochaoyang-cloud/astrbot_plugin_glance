@@ -1,7 +1,7 @@
 name: astrbot_plugin_eye_watch
 display_name: 余光
 desc: 偶尔看一眼屏幕，命中且画面有变化才推消息。默认关闭，开启后按采样间隔掷骰，识图走本地视觉模型，不联网、不起外部进程。
-version: 0.5.0
+version: 0.5.1
 author: 小幽（和他的大肥鱼
 repo: https://github.com/ylmaochaoyang-cloud/astrbot_plugin_glance
 short_desc: 偶尔看一眼屏幕，有变化才说话
